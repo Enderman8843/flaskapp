@@ -79,7 +79,7 @@ def hello_name(name):
         "Is_It_Even":isodd(name)
     }
  
-  return jsonify(response)
+  return response
 
 if __name__ == '__main__':
    app.run(debug = True)
