@@ -70,17 +70,13 @@ def isodd(numb):
 
 
  
-@app.route('/api/v1/sum/',methods = ['POST', 'GET'])
-
-
-name = request.args.get('num')
-
-def hello_name(name):
-
+@app.route('/api/v1/sum/', methods = ['GET', 'POST', 'DELETE'])
+def hello_name():
+  num = int(request.args['num'])
   response = {
-        "Is_It_Prime": primenumberfinder('name'),
-        "List_of_factors": str(find_factors('name'))[1:-1],
-        "Is_It_Even":isodd('name')
+        "Is_It_Prime": primenumberfinder(num),
+        "List_of_factors": str(find_factors(num))[1:-1],
+        "Is_It_Even":isodd(num)
     }
  
   return jsonify(response)
