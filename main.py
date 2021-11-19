@@ -70,7 +70,7 @@ def isodd(numb):
 
 
  
-@app.route('/api/v1/sum/',methods = ['POST', 'GET']))
+@app.route('/api/v1/sum/',methods = ['POST', 'GET'])
   
 def hello_name(name):
 
