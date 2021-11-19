@@ -75,9 +75,9 @@ def isodd(numb):
 def hello_name(name):
 
   response = {
-        "Is_It_Prime": primenumberfinder(request.args.get('number')),
-        "List_of_factors": str(find_factors(request.args.get('number')))[1:-1],
-        "Is_It_Even":isodd(request.args.get('number'))
+        "Is_It_Prime": primenumberfinder('number'),
+        "List_of_factors": str(find_factors('number'))[1:-1],
+        "Is_It_Even":isodd('number')
     }
  
   return jsonify(response)
