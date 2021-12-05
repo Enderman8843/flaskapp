@@ -75,7 +75,7 @@ def home():
 
 
  
-@app.route('/api/v1/findformula/', methods = ['GET', 'POST', 'DELETE'])
+@app.route('/api/v1/numbers/findformula/', methods = ['GET', 'POST', 'DELETE'])
 def hello_name():
   num = int(request.args['num'])
   response = {
@@ -88,3 +88,48 @@ def hello_name():
 
 if __name__ == '__main__':
    app.run(debug = True)
+    
+
+s = None
+
+
+@app.route('/api/v1/chemical/findcompound/', methods = ['GET', 'POST', 'DELETE'])
+def hello_name98():
+  
+  num = (request.args['element'])
+  xenon = Element(num) #Instantiate with symbol of Element
+
+  return jsonify(xenon.properties)
+
+
+@app.errorhandler(500)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return ("<h1> Invalid Input Check with your Input")
+     
+@app.errorhandler(400)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return ("<h1> No Input Error Code 400 contact adminstrator for help")
+
+
+
+@app.route('/api/v1/chemical/findformula/', methods = ['GET', 'POST', 'DELETE'])
+def hello_name():
+  
+  num = (request.args['chemical'])
+
+  
+  water = Compound(num)
+  form = water.formula
+  molar = water.molar_mass()
+  val = str(molar)
+  response = ('{ formula : ' + form + ", Molar :" + str.format(val) + "}" )
+  
+ 
+
+  return response
+
+app.run()
+
+
