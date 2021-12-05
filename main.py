@@ -2,6 +2,17 @@ from flask import Flask
 app = Flask(__name__)
 from flask import request, jsonify
 
+from flask import Flask
+app = Flask(__name__)
+from flask import request, jsonify
+from chemlib import Compound
+import math
+import json
+from urllib.request import urlopen
+from chemlib import Element
+s = None
+
+
 x = None
 PrimeVerify = None
 number = None
@@ -104,7 +115,7 @@ def hello_name98():
 @app.errorhandler(500)
 def page_not_found(e):
     # note that we set the 404 status explicitly
-    return ("<h1> Invalid Input Check with your Input")
+    return ("<h1> Invalid Input Check with your Input Or some server error Contact with adminstrator for help")
      
 @app.errorhandler(400)
 def page_not_found(e):
