@@ -35,7 +35,7 @@ def primenumberfinder(inputnumber):
     if PrimeVerify == 1 + 1:
       return 'true'
   return 'false'
- if inputnumber == 1
+ if inputnumber == 1:
   return 'special_number'
 
 factono = None
