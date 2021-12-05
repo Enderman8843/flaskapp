@@ -76,7 +76,7 @@ def home():
 
  
 @app.route('/api/v1/numbers/findformula/', methods = ['GET', 'POST', 'DELETE'])
-def hello_name():
+def hello_name999():
   num = int(request.args['num'])
   response = {
         "Is_It_Prime": primenumberfinder(num),
@@ -86,8 +86,7 @@ def hello_name():
  
   return jsonify(response)
 
-if __name__ == '__main__':
-   app.run(debug = True)
+
     
 
 s = None
@@ -115,7 +114,7 @@ def page_not_found(e):
 
 
 @app.route('/api/v1/chemical/findformula/', methods = ['GET', 'POST', 'DELETE'])
-def hello_name():
+def hello_name9889():
   
   num = (request.args['chemical'])
 
@@ -130,6 +129,7 @@ def hello_name():
 
   return response
 
-app.run()
+if __name__ == '__main__':
+   app.run(debug = True)
 
 
