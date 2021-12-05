@@ -24,6 +24,7 @@ def downRange(start, stop, step):
 
 # Describe this function...
 def primenumberfinder(inputnumber):
+ 
   global PrimeVerify, number, i
   PrimeVerify = 0
   number = inputnumber
@@ -34,6 +35,8 @@ def primenumberfinder(inputnumber):
     if PrimeVerify == 1 + 1:
       return 'true'
   return 'false'
+ if inputnumber == 1
+  return 'special_number'
 
 factono = None
 Factors = None
