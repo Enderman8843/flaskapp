@@ -24,7 +24,6 @@ def downRange(start, stop, step):
 
 # Describe this function...
 def primenumberfinder(inputnumber):
- 
   global PrimeVerify, number, i
   PrimeVerify = 0
   number = inputnumber
@@ -35,8 +34,6 @@ def primenumberfinder(inputnumber):
     if PrimeVerify == 1 + 1:
       return 'true'
   return 'false'
- if inputnumber == 1:
-  return 'special_number'
 
 factono = None
 Factors = None
@@ -70,10 +67,15 @@ def isodd(numb):
       return 'true'
   return 'false'
 
+@app.route('/', methods=['GET'])
+def home():
+    return "<h1>A Open-sourced Python Flask Project by funlrn.</p>"
+
+
 
 
  
-@app.route('/api/v1/sum/', methods = ['GET', 'POST', 'DELETE'])
+@app.route('/api/v1/findformula/', methods = ['GET', 'POST', 'DELETE'])
 def hello_name():
   num = int(request.args['num'])
   response = {
