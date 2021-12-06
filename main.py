@@ -129,7 +129,7 @@ def hello_name9889():
   form = water.formula
   molar = water.molar_mass()
   val = str(molar)
-  response = jsonify('{"formula" : ' + form + ", "Molar" :" + str.format(val) + "}" )
+  response = jsonify('{"formula" : ' + form + ", Molar :" + str.format(val) + "}" )
   
  
 
