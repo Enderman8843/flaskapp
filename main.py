@@ -81,7 +81,7 @@ def home():
 
 
  
-@app.route('/api/v1/numbers/findformula/', methods = ['GET', 'POST', 'DELETE'])
+@app.route('/api/v1/numbers/find_details/', methods = ['GET', 'POST', 'DELETE'])
 def hello_name999():
   num = int(request.args['num'])
   response = {
@@ -129,7 +129,7 @@ def hello_name9889():
   form = water.formula
   molar = water.molar_mass()
   val = str(molar)
-  response = ('{ formula : ' + form + ", Molar :" + str.format(val) + "}" )
+  response = ('{"formula" : ' + form + ", "Molar" :" + str.format(val) + "}" )
   
  
 
