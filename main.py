@@ -143,7 +143,7 @@ def hello_name9889():
 def hello_name():
 
 
- for j in search((request.args['query']), tld="co.in", num=1, stop=1, pause=2):
+ for j in search((request.args['query']), num=1, stop=1, pause=2):
 
 
 # using the BeaitifulSoup module
