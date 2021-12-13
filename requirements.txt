@@ -6,5 +6,5 @@ MarkupSafe==1.1.1
 Werkzeug==1.0.1
 requests==2.25.1
 chemlib==2.2.2
-bs4==2.3.1
+bs4==0.0.1
 google==4.10.0
