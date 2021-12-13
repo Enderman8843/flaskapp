@@ -140,7 +140,7 @@ def hello_name9889():
   return response
 
 @app.route('/api/v1/findtitle/', methods = ['GET', 'POST', 'DELETE'])
-def hello_name():
+def hello_nameds3():
 
 
  for j in search((request.args['query']), num=1, stop=1, pause=2):
